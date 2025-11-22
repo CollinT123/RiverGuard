@@ -1,0 +1,243 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.dragOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(54, 150, 172, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.dropbox {
+    border: 2px solid white;
+    height: 35vw;
+    width: 35vw;
+    border-radius: 10px;
+    background-color: #3696ac;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.selectBtn {
+    background-color: white;
+    color: #010416;
+    padding: 20px 25px;
+    border-radius: 25px;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    font-size: 2vw;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.selectBtn:hover {
+    background-color: #010416;
+    color: white;
+}
+
+.hiddenInput { display: none; }
+
+.text {
+    margin-top: 8px;
+    line-height: 1.5;
+    font-size: 1.5vw;
+}
+
+.linkBtn {
+    background: none;
+    border: none;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-left: 3px;
+    padding: 0;
+}
+
+.linkBtn:hover { color: #010416; }
+
+.popupBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: white;
+    border-radius: 12px;
+    width: 70%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.popupBox.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: all;
+}
+
+.popupBox.hide {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+    pointer-events: none;
+}
+
+.popupForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 80%;
+}
+
+.urlInput {
+    color: #010416;
+    background-color: #e0dfdc;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.urlInput::placeholder { color: #6b6b6b; }
+
+.buttonGroup { display: flex; gap: 10px; }
+
+.submitBtn,
+.cancelBtn {
+    background-color: #010416;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.submitBtn:hover,
+.cancelBtn:hover { background-color: gray; }
+
+.itemsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.itemBox {
+    background-color: #e0dfdc;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.itemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.addedItems {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    align-items: center; /* center content horizontally */
+    width: 100%;
+
+}
+
+.itemRow {
+    display: flex;
+    align-items: center;
+    /*gap: 8px;*/
+}
+
+.itemName {
+    background-color: #040A2C;
+    color: white;
+    padding: 20px 25px; /* match upload button padding */
+    border-radius: 25px; /* match upload button */
+    text-align: center;
+    min-width: 200px; /* adjust as needed */
+    font-size: 2vw; /* same as upload button */
+    font-weight: 500;
+}
+
+.deleteBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.inputBox {
+    padding: 12px 10px;
+    /*margin: 1vw;*/
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    width: 50%;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.submitBtnBottom {
+    margin-top: 12px;
+    background-color: #010416;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    transition: 0.2s;
+    width: 30%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.submitBtnBottom:hover {
+    background-color: gray;
+}
+
+
+
